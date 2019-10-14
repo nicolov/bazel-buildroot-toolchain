@@ -1,0 +1,8 @@
+version: '3'
+services:
+  builder:
+    build: .
+    volumes:
+      - .:/src
+    working_dir: /src
+    command: "./cruise_build.py"

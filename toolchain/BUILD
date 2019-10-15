@@ -14,8 +14,14 @@ filegroup(name = "empty")
 filegroup(
     name = "all",
     srcs = [
-        ":wrappers/gcc",
         "@bazel_buildroot_toolchain_files//:all",
+        "wrappers/x86_64-buildroot-linux-musl-ar",
+        "wrappers/x86_64-buildroot-linux-musl-ar",
+        "wrappers/x86_64-linux-cpp.br_real",
+        "wrappers/x86_64-linux-gcc-9.1.0.br_real",
+        "wrappers/x86_64-linux-ld",
+        "wrappers/x86_64-linux-nm",
+        "wrappers/x86_64-linux-objdump",
     ],
 )
 

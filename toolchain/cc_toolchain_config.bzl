@@ -82,10 +82,6 @@ def _toolchain_config_impl(ctx):
         ],
     )
 
-    supports_pic_feature = feature(name = "supports_pic", enabled = True)
-    supports_start_end_lib_feature = feature(name = "supports_start_end_lib", enabled = True)
-    supports_dynamic_linker_feature = feature(name = "supports_dynamic_linker", enabled = True)
-
     dbg_feature = feature(name = "dbg")
     opt_feature = feature(name = "opt")
 
@@ -122,9 +118,6 @@ def _toolchain_config_impl(ctx):
         abi_libc_version = "unknown",
         tool_paths = tool_paths,
         features = [
-			supports_dynamic_linker_feature,
-			supports_pic_feature,
-			supports_start_end_lib_feature,
             default_link_flags_feature,
             unfiltered_compile_flags_feature,
         ],

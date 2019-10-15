@@ -16,7 +16,6 @@ filegroup(
     srcs = [
         "@bazel_buildroot_toolchain_files//:all",
         "wrappers/x86_64-buildroot-linux-musl-ar",
-        "wrappers/x86_64-buildroot-linux-musl-ar",
         "wrappers/x86_64-linux-cpp.br_real",
         "wrappers/x86_64-linux-gcc-9.1.0.br_real",
         "wrappers/x86_64-linux-ld",
@@ -33,8 +32,9 @@ cc_toolchain(
     compiler_files = ":all",
     dwp_files = ":empty",
     linker_files = ":all",
-    objcopy_files = ":empty",
-    strip_files = ":empty",
+    objcopy_files = ":all",
+    ar_files = ":all",
+    strip_files = ":all",
     supports_param_files = False,
 )
 
